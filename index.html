@@ -1,14 +1,139 @@
 <!DOCTYPE html>
 <html lang="nl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BioBeautys - Coming Soon</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="flex flex-col items-center justify-center min-h-screen bg-[#bab4af] text-white text-center p-4">
-    <h1 class="text-4xl font-bold mb-4 text-[#cea68c]">BioBeautys</h1>
-    <p class="text-lg mb-6">Onze webshop komt binnenkort online! 🌿</p>
-    <div class="animate-pulse text-sm text-gray-200">Stay tuned...</div>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BioBeautys - Binnenkort</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+  <style>
+    /* Kleuren thema */
+    :root {
+      --kleur1: #ccb7a6;
+      --kleur2: #dcc4d6;
+      --kleur3: #f9efe5;
+      --kleur4: #f5f5db;
+      --kleur5: #f0e0d3;
+      --kleur6: #fefdfb;
+      --text-color: #333;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, var(--kleur1), var(--kleur2), var(--kleur3));
+      animation: bgAnimation 15s ease infinite;
+    }
+
+    @keyframes bgAnimation {
+      0% { background: linear-gradient(135deg, var(--kleur1), var(--kleur2), var(--kleur3)); }
+      50% { background: linear-gradient(135deg, var(--kleur4), var(--kleur5), var(--kleur6)); }
+      100% { background: linear-gradient(135deg, var(--kleur1), var(--kleur2), var(--kleur3)); }
+    }
+
+    .card {
+      background-color: rgba(255,255,255,0.3); /* halve opacity */
+      padding: 80px;
+      border-radius: 40px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+      text-align: center;
+      justify-content: center;
+      max-width: 1400px;
+      width: 90%;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-20px);}
+      100% { opacity: 1; transform: translateY(0);}
+    }
+
+    .logo {
+      display: block;
+      margin: 0 auto 30px auto;
+      width: 350px;
+      border-radius: 20px;
+      object-fit: contain;
+      animation: pulse 3s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    h1 {
+      font-size: 4rem;
+      color: var(--text-color);
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+
+    .coming-soon {
+      display: inline-block;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--kleur1);
+      margin-bottom: 30px;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-15px); }
+      60% { transform: translateY(-8px); }
+    }
+
+    p {
+      color: var(--text-color);
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+    }
+
+    .socials a {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 10px;
+      padding: 12px 25px;
+      border-radius: 50px;
+      background-color: var(--kleur1);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+      font-size: 1rem;
+    }
+
+    .socials a:hover {
+      background-color: var(--kleur5);
+      color: var(--kleur1);
+    }
+
+    .socials a i {
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="logo.png" alt="BioBeautys Logo" class="logo">
+    <p class="coming-soon">Binnenkort online!</p>
+    <p>Volg ons alvast op Instagram voor updates:</p>
+    <div class="socials">
+      <a href="https://www.instagram.com/nl.biobeautys/" target="_blank">
+        <i class="fab fa-instagram"></i> @nl.biobeautys
+      </a>
+    </div>
+  </div>
+</body>
 </html>
