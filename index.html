@@ -26,12 +26,13 @@
     }
 
     body {
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
       background: linear-gradient(135deg, var(--kleur1), var(--kleur2), var(--kleur3));
       animation: bgAnimation 15s ease infinite;
+      padding: 20px;
     }
 
     @keyframes bgAnimation {
@@ -41,15 +42,18 @@
     }
 
     .card {
-      background-color: rgba(255,255,255,0.3); /* halve opacity */
-      padding: 80px;
-      border-radius: 40px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+      background-color: rgba(255,255,255,0.35);
+      padding: 100px 60px;
+      border-radius: 50px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.25);
       text-align: center;
       justify-content: center;
       max-width: 1400px;
-      width: 90%;
+      width: 95%;
       animation: fadeIn 2s ease forwards;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     @keyframes fadeIn {
@@ -58,9 +62,9 @@
     }
 
     .logo {
-      display: block;
-      margin: 0 auto 30px auto;
-      width: 350px;
+      width: 400px;
+      max-width: 90%;
+      margin-bottom: 40px;
       border-radius: 20px;
       object-fit: contain;
       animation: pulse 3s ease-in-out infinite;
@@ -71,19 +75,11 @@
       50% { transform: scale(1.05); }
     }
 
-    h1 {
-      font-size: 4rem;
-      color: var(--text-color);
-      margin-bottom: 15px;
-      letter-spacing: 1px;
-    }
-
     .coming-soon {
-      display: inline-block;
-      font-size: 2rem;
+      font-size: 2.5rem;
       font-weight: 700;
       color: var(--kleur1);
-      margin-bottom: 30px;
+      margin-bottom: 25px;
       animation: bounce 2s infinite;
     }
 
@@ -95,23 +91,31 @@
 
     p {
       color: var(--text-color);
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       margin-bottom: 40px;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
     }
 
     .socials a {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      margin: 10px;
-      padding: 12px 25px;
+      gap: 12px;
+      padding: 14px 30px;
       border-radius: 50px;
       background-color: var(--kleur1);
       color: white;
       text-decoration: none;
       font-weight: 600;
       transition: all 0.3s;
-      font-size: 1rem;
+      font-size: 1.1rem;
     }
 
     .socials a:hover {
@@ -120,7 +124,31 @@
     }
 
     .socials a i {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
+    }
+
+    /* Responsive aanpassingen */
+    @media (max-width: 1024px) {
+      .card { padding: 80px 40px; }
+      .logo { width: 300px; }
+      .coming-soon { font-size: 2rem; }
+      p { font-size: 1.2rem; }
+    }
+
+    @media (max-width: 768px) {
+      .card { padding: 60px 30px; }
+      .logo { width: 250px; }
+      .coming-soon { font-size: 1.8rem; }
+      p { font-size: 1.1rem; }
+      .socials a { padding: 12px 25px; font-size: 1rem; }
+    }
+
+    @media (max-width: 480px) {
+      .card { padding: 40px 20px; }
+      .logo { width: 180px; }
+      .coming-soon { font-size: 1.5rem; }
+      p { font-size: 1rem; }
+      .socials a { padding: 10px 20px; font-size: 0.95rem; }
     }
   </style>
 </head>
@@ -137,3 +165,4 @@
   </div>
 </body>
 </html>
+
